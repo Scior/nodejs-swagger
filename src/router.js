@@ -12,4 +12,8 @@ router.get(apiBaseUrl + 'about', (req, res) => {
   res.send('about');
 });
 
+router.post(apiBaseUrl + 'alpaca', (req, res) => {
+  res.json(req.body);
+});
+
 module.exports = router;

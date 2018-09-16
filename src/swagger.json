@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.0.0",
-    "title": "myapp",
+    "version": "0.0.1",
+    "title": "nodejs-swagger",
     "description": "Swagger test app with Node"
   },
   "basePath": "/api/v1",
@@ -23,16 +23,16 @@
     "application/json"
   ],
   "definitions": {
-    "ExampleBody": {
+    "Something": {
       "type": "object",
-      "title": "example",
+      "title": "something",
       "required": [
         "name"
       ],
       "properties": {
         "name": {
           "type": "string",
-          "example": "no_stress"
+          "example": "nya"
         }
       }
     }
@@ -49,26 +49,28 @@
             "description": "Returns all examples"
           }
         }
-      },
+      }
+    },
+    "/alpaca": {
       "post": {
         "tags": [
           "Examples"
         ],
-        "description": "Create a new example",
+        "description": "Create something",
         "parameters": [
           {
             "name": "example",
             "in": "body",
-            "description": "an example",
+            "description": "something",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ExampleBody"
+              "$ref": "#/definitions/Something"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Returns all examples"
+            "description": "Returns something"
           }
         }
       }
@@ -93,18 +95,6 @@
           },
           "404": {
             "description": "Example not found"
-          }
-        }
-      }
-    },
-    "/spec": {
-      "get": {
-        "tags": [
-          "Specification"
-        ],
-        "responses": {
-          "200": {
-            "description": "Return the API specification"
           }
         }
       }

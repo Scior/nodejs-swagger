@@ -1,6 +1,6 @@
 {
-  "name": "unk",
-  "version": "1.0.0",
+  "name": "nodejs-swagger",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "swagger-ui-express": "^4.0.1"
   },
